@@ -1,5 +1,5 @@
 "use client"
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
 import Autoplay from "embla-carousel-autoplay"
 
 export default function OurClients() {
@@ -27,26 +27,26 @@ export default function OurClients() {
           }}
           plugins={[
             Autoplay({
-              delay: 2000,
+              delay: 3000,
             }),
           ]}
           className="w-full max-w-6xl mx-auto"
         >
-          <CarouselContent className="-ml-4">
+          <CarouselContent className="-ml-2 md:-ml-4">
             {clientLogos.map((logo, index) => (
-              <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/4">
-                <div className="p-1">
-                  <img
-                    src={logo.src || "/placeholder.svg"}
-                    alt={logo.alt}
-                    className="w-full h-24 object-contain grayscale opacity-75 hover:opacity-100 transition-opacity duration-300"
-                  />
+              <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6">
+                <div className="p-2 md:p-4">
+                  <div className="bg-white dark:bg-slate-800 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow duration-300">
+                    <img
+                      src={logo.src || "/placeholder.svg"}
+                      alt={logo.alt}
+                      className="w-full h-16 md:h-20 object-contain grayscale opacity-75 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
+                    />
+                  </div>
                 </div>
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
         </Carousel>
       </div>
     </section>

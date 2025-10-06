@@ -28,16 +28,57 @@ export default function AboutUs() {
                     </div>
                     <div className="space-y-6 text-lg md:text-xl leading-relaxed">
                       <p className="text-pretty">
-                        Ramchandra Transport is a leading provider of integrated logistics solutions, committed to delivering
-                        excellence and innovation. With years of experience, we have built a reputation for reliability, efficiency,
-                        and customer-centric services. Our global network and advanced technology ensure that your cargo is handled
-                        with the utmost care and precision, from origin to destination.
+                      Ramchandra Transport is a global logistics and supply chain partner built on trust, innovation, and excellence. With years of experience and a dedicated team, we provide seamless solutions across air, ocean, road, and warehousing.
                       </p>
                       <p className="text-muted-foreground text-pretty">
-                        We believe in fostering strong partnerships and continuously adapting to the evolving demands of the global
-                        supply chain. Our dedicated team works tirelessly to provide tailored solutions that drive success for our
-                        clients.
+                      Our commitment to quality, innovation, and customer satisfaction drives us to deliver seamless logistics solutions across all modes of transportation.
                       </p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Mission and Values Section */}
+                <div className="mt-16">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    {/* Mission */}
+                    <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20 rounded-xl p-6 border border-blue-200/50 dark:border-blue-800/50">
+                      <div className="flex items-center justify-center mb-4">
+                        <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                          </svg>
+                        </div>
+                      </div>
+                      <h3 className="text-xl font-bold mb-3 text-blue-900 dark:text-blue-100 text-center">Our Mission</h3>
+                      <p className="text-sm text-blue-800 dark:text-blue-200 leading-relaxed text-center">
+                        Deliver smarter supply chains with reliability and visibility.
+                      </p>
+                    </div>
+
+                    {/* Values */}
+                    <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950/20 dark:to-emerald-950/20 rounded-xl p-6 border border-green-200/50 dark:border-green-800/50">
+                      <div className="flex items-center justify-center mb-4">
+                        <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center">
+                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                          </svg>
+                        </div>
+                      </div>
+                      <h3 className="text-xl font-bold mb-4 text-green-900 dark:text-green-100 text-center">Our Values</h3>
+                      <div className="flex flex-wrap justify-center gap-2">
+                        {[
+                          { name: "Integrity", icon: "🛡️" },
+                          { name: "Innovation", icon: "💡" },
+                          { name: "Excellence", icon: "⭐" },
+                          { name: "Customer Focus", icon: "👥" },
+                          { name: "Sustainability", icon: "🌱" }
+                        ].map((value, index) => (
+                          <div key={index} className="flex items-center space-x-1 bg-white/50 dark:bg-gray-800/50 rounded-md px-2 py-1 backdrop-blur-sm">
+                            <span className="text-sm">{value.icon}</span>
+                            <span className="text-xs font-semibold text-green-800 dark:text-green-200">{value.name}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>

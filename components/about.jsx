@@ -23,6 +23,7 @@ export default function AboutUs() {
             clients.
           </p>
         </div>
+        
       </div>
     </section>
   )

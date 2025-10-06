@@ -1,5 +1,3 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-
 export default function OurServices() {
   const services = [
     {
@@ -36,22 +34,28 @@ export default function OurServices() {
 
   return (
     <section className="py-16 md:py-24 bg-secondary text-foreground">
-      <div className="container mx-auto px-4 md:px-6 text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-balance">Our Services</h2>
-        <p className="text-lg md:text-xl max-w-3xl mx-auto mb-12 text-pretty">
-          We offer a comprehensive range of logistics services designed to meet your unique business needs.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-balance">Our Services</h2>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto text-pretty">
+            We offer a comprehensive range of logistics services designed to meet your unique business needs.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <Card key={index} className="flex flex-col items-center p-6 text-center bg-card">
-              <CardHeader>
-                <img src={service.icon || "/placeholder.svg"} alt={service.title} className="mb-4 h-12 w-12" />
-                <CardTitle className="text-2xl font-semibold">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">{service.description}</p>
-              </CardContent>
-            </Card>
+            <div key={index} className="bg-card rounded-lg p-6 text-center shadow-sm border">
+              <div className="flex flex-col items-center h-full">
+                <img 
+                  src={service.icon || "/placeholder.svg"} 
+                  alt={service.title} 
+                  className="mb-4 h-16 w-16 object-contain" 
+                />
+                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
+                  {service.description}
+                </p>
+              </div>
+            </div>
           ))}
         </div>
       </div>

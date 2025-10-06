@@ -179,12 +179,12 @@ function MobileMenu() {
   return (
     <div className="flex flex-col h-full">
       {/* Mobile Menu Header */}
-      <div className="flex items-center justify-between p-4 border-b border-border">
+      <div className="flex items-center justify-between p-5 border-b border-border">
         <div className="flex items-center space-x-2">
           <img 
-            src="/logistics-company-logo.png" 
+            src="/logo.svg" 
             alt="Ramchandra Transport Logo" 
-            className="h-8 w-8" 
+            className="h-24 w-24" 
           />
           {/* <span className="font-bold text-lg">Ramchandra Transport</span> */}
         </div>
@@ -298,14 +298,14 @@ export default function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b border-border">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full  bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b border-border">
+      <div className="container mx-auto flex h-20 py-5 items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2">
+        <Link href="/" className="flex items-center space-x-2 p-5">
           <img 
-            src="/logistics-company-logo.png" 
+            src="/logo.svg" 
             alt="Ramchandra Transport Logo" 
-            className="h-24 w-24 sm:h-10 " 
+            className="h-40 w-40 " 
           />
           {/* <span className="font-bold text-lg sm:text-xl">Ramchandra Transport</span> */}
         </Link>

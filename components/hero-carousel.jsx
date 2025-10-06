@@ -11,9 +11,8 @@ const heroSlides = [
   {
     id: 1,
     title: "Empowering Global Supply Chains",
-    subtitle: "Innovative logistics solutions for a connected world.",
+    subtitle: "End-to-end logistics, advisory, and technology solutions designed for speed, visibility, and growth.",
     image: "/logistics-warehouse-trucks.png",
-    primaryButton: { text: "Our Services", href: "/services" },
     secondaryButton: { text: "Contact Us", href: "/contact" }
   },
   {
@@ -21,7 +20,6 @@ const heroSlides = [
     title: "Reliable Transportation Solutions",
     subtitle: "Connecting businesses across India with efficient logistics.",
     image: "/logistics-warehouse-trucks.png",
-    primaryButton: { text: "Get Quote", href: "/request-quote" },
     secondaryButton: { text: "Learn More", href: "/about-us" }
   },
   {
@@ -29,7 +27,6 @@ const heroSlides = [
     title: "Advanced Control Tower Technology",
     subtitle: "Real-time visibility and proactive management of your shipments.",
     image: "/logistics-warehouse-trucks.png",
-    primaryButton: { text: "Control Tower", href: "/control-tower" },
     secondaryButton: { text: "Industries", href: "/industries" }
   }
 ]
@@ -96,14 +93,6 @@ export default function HeroCarousel() {
                   {slide.subtitle}
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
-                  <Button 
-                    asChild 
-                    className="bg-white text-primary hover:bg-gray-100 px-8 py-3 text-lg rounded-full"
-                  >
-                    <Link href={slide.primaryButton.href}>
-                      {slide.primaryButton.text}
-                    </Link>
-                  </Button>
                   <Button
                     asChild
                     variant="outline"
