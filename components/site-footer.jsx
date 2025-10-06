@@ -6,7 +6,7 @@ export default function SiteFooter() {
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">
           <div className="space-y-3">
             <div className="flex items-center gap-2">
-              <img src="/logistics-company-logo.png" alt="Ramchandra Transport logo" className="h-7 w-7" />
+              <img src="/logo.svg" alt="Ramchandra Transport logo" className="h-20 w-20" />
               <span className="font-semibold">Ramchandra Transport</span>
             </div>
             <p className="text-sm text-muted-foreground text-pretty">
@@ -62,31 +62,26 @@ export default function SiteFooter() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold mb-3">Industries</h3>
+            <h3 className="text-sm font-semibold mb-3">Advisory</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="/industries/fmcg" className="hover:underline">
-                  FMCG
+                <a href="/advisory/descriptiveAnalytics" className="hover:underline">
+                  Descriptive Analytics
                 </a>
               </li>
               <li>
-                <a href="/industries/e-commerce" className="hover:underline">
-                  E‑Commerce
+                <a href="/advisory/predictiveAnalytics" className="hover:underline">
+                  Predictive Analytics
                 </a>
               </li>
               <li>
-                <a href="/industries/telecom" className="hover:underline">
-                  Telecom
+                <a href="/advisory/prescriptiveAnalytics" className="hover:underline">
+                  Prescriptive Analytics
                 </a>
               </li>
               <li>
-                <a href="/industries/pharmaceutical" className="hover:underline">
-                  Pharmaceutical
-                </a>
-              </li>
-              <li>
-                <a href="/industries/beverages" className="hover:underline">
-                  Beverages
+                <a href="/advisory/supplyChain" className="hover:underline">
+                  Supply Chain
                 </a>
               </li>
             </ul>

@@ -203,9 +203,14 @@ export default function Industries() {
                   <DialogTrigger asChild>
                     <Card className="group relative overflow-hidden bg-white border-0 shadow-lg hover:shadow-2xl transition-all duration-500 rounded-2xl hover:scale-105 cursor-pointer">
                       <CardHeader className="p-6">
-                        <CardTitle className="text-xl lg:text-2xl font-bold text-gray-900 group-hover:text-blue-900 transition-colors duration-300">
-                          {industry.title}
-                        </CardTitle>
+                        <div className="flex items-center gap-4 mb-4">
+                          <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                            <IconComponent className="h-6 w-6 text-blue-600" />
+                          </div>
+                          <CardTitle className="text-xl lg:text-2xl font-bold text-gray-900 group-hover:text-blue-900 transition-colors duration-300">
+                            {industry.title}
+                          </CardTitle>
+                        </div>
                         <p className="text-gray-600 mt-2">
                           {industry.description}
                         </p>
@@ -223,37 +228,51 @@ export default function Industries() {
                         <div className="p-3 bg-blue-600 rounded-xl mr-4">
                           <IconComponent className="h-8 w-8 text-white" />
                         </div>
-                        {industry.title}
+                        {industry.title} Industry Solutions
                       </DialogTitle>
                     </DialogHeader>
                     <div className="space-y-6">
-                      <div className="relative aspect-video rounded-lg overflow-hidden">
-                        <Image
-                          src={industry.image}
-                          alt={industry.title}
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
                       <div className="space-y-4">
-                        <p className="text-gray-700 text-lg leading-relaxed text-justify">
+                        <p className="text-gray-700 text-lg leading-relaxed">
                           {industry.detailedDescription}
                         </p>
                         <div className="bg-blue-50 p-6 rounded-lg">
-                          <h4 className="text-lg font-semibold text-blue-900 mb-3">
-                            Benefits of Our Offering to the {industry.title}{" "}
-                            Sector:
+                          <h4 className="text-lg font-semibold text-blue-900 mb-4">
+                            Key Benefits for {industry.title} Sector:
                           </h4>
-                          <ul className="space-y-2">
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                             {industry.benefits.map((benefit, benefitIndex) => (
-                              <li
+                              <div
                                 key={benefitIndex}
-                                className="flex items-start text-gray-700"
+                                className="flex items-center text-gray-700"
                               >
-                                <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                                {benefit}
-                              </li>
+                                <CheckCircle className="w-5 h-5 text-blue-600 mr-3 flex-shrink-0" />
+                                <span>{benefit}</span>
+                              </div>
                             ))}
+                          </div>
+                        </div>
+                        <div className="bg-gray-50 p-6 rounded-lg">
+                          <h4 className="text-lg font-semibold text-gray-900 mb-3">
+                            Our Services Include:
+                          </h4>
+                          <ul className="space-y-2 text-gray-700">
+                            <li className="flex items-center">
+                              <ArrowRight className="w-4 h-4 text-blue-600 mr-2" />
+                              Supply Chain Optimization
+                            </li>
+                            <li className="flex items-center">
+                              <ArrowRight className="w-4 h-4 text-blue-600 mr-2" />
+                              Inventory Management
+                            </li>
+                            <li className="flex items-center">
+                              <ArrowRight className="w-4 h-4 text-blue-600 mr-2" />
+                              Distribution Network Design
+                            </li>
+                            <li className="flex items-center">
+                              <ArrowRight className="w-4 h-4 text-blue-600 mr-2" />
+                              Technology Integration
+                            </li>
                           </ul>
                         </div>
                       </div>
